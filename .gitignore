@@ -1,0 +1,15 @@
+# Pasta de configurações do PyCharm (não deve ir para o GitHub)
+.idea/
+
+# Cache compilado pelo Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Base de dados SQLite (não precisa versionar a database local)
+database.db
+
+# Arquivos de log e temporários
+*.log
+*.tmp

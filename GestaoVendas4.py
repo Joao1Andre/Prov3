@@ -90,7 +90,6 @@ class GestorVendasApp:
             shadow=ft.BoxShadow(color="#aaa", blur_radius=10, offset=ft.Offset(0, 4)),
         )
 
-        # Adiciona o container centralizado à página
         self.page.add(
             ft.Row(
                 [container_centralizado],
@@ -439,5 +438,8 @@ def main(page: ft.Page):
 
 
 if __name__ == "__main__":
-    ft.app(target=main, view=ft.WEB_BROWSER)
-
+    port = int(os.environ.get("PORT", 0))
+    if port == 0:
+        ft.app(target=main, view=ft.WEB_BROWSER, port=5000)
+    else:
+        ft.app(target=main, port=port)
